@@ -1,0 +1,10 @@
+<% if model.errors.any? %>
+  <div id="error_explanation">
+    <h3><%= model.errors.count %> error<%= "s" if model.errors.count != 1 %> prohibited this obj from being saved:</h3>
+    <ul>
+      <% model.errors.full_messages.each do |massage| %>
+        <li><%= massage %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
